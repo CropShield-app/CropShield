@@ -1,0 +1,6 @@
+[
+  { "code": "en", "name": "English", "native": "English", "reviewed": true },
+  { "code": "te", "name": "Telugu", "native": "తెలుగు", "reviewed": false },
+  { "code": "hi", "name": "Hindi", "native": "हिन्दी", "reviewed": false },
+  { "code": "bn", "name": "Bengali", "native": "বাংলা", "reviewed": false }
+]

@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "CropShield",
+    "offline": "Works offline"
+  },
+  "nav": {
+    "scanAsk": "Scan and ask",
+    "myFarm": "My farm",
+    "jobs": "Labor"
+  },
+  "lang": {
+    "all": "All languages",
+    "search": "Search for a language",
+    "import": "Import language pack"
+  },
+  "scan": {
+    "result": "Scan result",
+    "listen": "Listen",
+    "notSure": "Not sure. Try a clearer photo.",
+    "demo": "Demo mode: the AI model has not been added yet, so no result is shown.",
+    "noVoice": "No voice for this language is installed on this phone. Read the text above.",
+    "frames": "Same weed in {{n}} of {{total}} video pictures",
+    "uploadPhoto": "Upload photo",
+    "uploadVideo": "Upload video",
+    "stop": "Stop",
+    "autoRead": "Read results aloud automatically"
+  },
+  "ask": {
+    "title": "Ask the AI helper",
+    "placeholder": "Ask in your language",
+    "search": "Ask",
+    "q1": "What is this weed?",
+    "q2": "How to remove it?",
+    "noMatch": "No answer found. Try other words."
+  },
+  "farm": {
+    "weather": "Temperature",
+    "rain": "Rain",
+    "soil": "Soil",
+    "water": "Water",
+    "landArea": "Land area",
+    "acres": "acres",
+    "cropName": "Crop",
+    "cropStage": "Crop stage",
+    "weedWindow": "Weed-critical window",
+    "trend": "Weeds found in my scans"
+  },
+  "grid": {
+    "title": "Field map",
+    "hint": "Tap a square to mark weeds: L = few, H = many. Spray only marked squares.",
+    "summary": "Spray only {{n}} of {{total}} squares. Skips {{percent}}% of the field.",
+    "clear": "Clear map"
+  },
+  "opt": {
+    "clay": "Clay",
+    "loam": "Loam",
+    "sand": "Sand",
+    "other": "Other",
+    "well": "Well",
+    "canal": "Canal",
+    "rain": "Rain"
+  },
+  "stages": {
+    "sowing": "Sowing",
+    "growing": "Growing",
+    "flowering": "Flowering",
+    "harvest": "Harvest"
+  },
+  "trend": {
+    "empty": "No scans yet. Scan a weed to see your history here."
+  },
+  "video": {
+    "failed": "Could not read this video. Try a shorter clip.",
+    "working": "Checking picture {{done}} of {{total}}"
+  },
+  "labor": {
+    "title": "Post a new weeding job",
+    "crop": "Crop",
+    "date": "Date",
+    "wage": "Pay",
+    "note": "Note",
+    "phone": "Phone number (optional)",
+    "add": "Save job",
+    "mine": "My job",
+    "received": "Received",
+    "sms": "Send by SMS",
+    "qr": "Show QR",
+    "delete": "Delete",
+    "importTitle": "Get a job from another phone",
+    "paste": "Paste the job code here",
+    "import": "Add job",
+    "scanQr": "Scan QR from photo",
+    "imported": "Job added.",
+    "bad": "This is not a CropShield job code.",
+    "noQr": "No QR code found in that photo.",
+    "empty": "No jobs yet.",
+    "qrHint": "Another phone can photograph this code.",
+    "board": "Job board",
+    "openCount": "{{n}} open jobs",
+    "boardNote": "Jobs saved on this phone: yours, and ones sent to you by SMS, QR or code.",
+    "search": "Search jobs (type or speak)",
+    "filter_all": "All",
+    "filter_open": "Open",
+    "filter_mine": "My jobs",
+    "filter_received": "Received",
+    "filter_done": "Done",
+    "showing": "Showing {{n}} of {{total}} jobs",
+    "markDone": "Mark done",
+    "reopen": "Reopen",
+    "statusOpen": "Open",
+    "statusDone": "Done"
+  },
+  "weather": {
+    "title": "Weather",
+    "none": "No saved forecast. Tap Update when you have internet.",
+    "update": "Update (needs internet)",
+    "failed": "Could not update. Check internet and location, then try again.",
+    "rain": "rain",
+    "rainCaution": "Rain is forecast in the next 3 days. Check your product label before spraying.",
+    "updated": "Saved {{when}}"
+  },
+  "land": {
+    "title": "Measure land with GPS",
+    "hint": "Stand at one corner and tap Add corner. Walk to the next corner, in order around the field. Add at least 3.",
+    "addCorner": "Add corner",
+    "undo": "Undo",
+    "clear": "Clear",
+    "corners": "Corners saved: {{n}}",
+    "use": "Use this area",
+    "gpsFailed": "No GPS reading. Go outside, turn on location, and try again.",
+    "lowAccuracy": "GPS was only accurate to about {{m}} m, so this area is a rough guess."
+  },
+  "voice": {
+    "notAvailable": "Voice input is not set up for this language.",
+    "start": "Speak",
+    "stop": "Stop",
+    "loading": "Loading voice...",
+    "hint": "Press once while online to save the voice for offline use.",
+    "failed": "Could not start the microphone or voice model.",
+    "hintOnline": "Needs internet in most browsers. Allow the microphone when asked.",
+    "denied": "Microphone is blocked. Allow it for this site in your browser settings."
+  },
+  "camera": {
+    "open": "Use live camera",
+    "take": "Take photo",
+    "sweep": "Scan while moving (8 sec)",
+    "close": "Close camera",
+    "hint": "Hold the camera over the weed. Scan while moving takes 8 pictures, one per second.",
+    "denied": "Camera is blocked. Allow the camera for this site in your browser and in your computer settings, then try again.",
+    "insecure": "The camera needs a secure link. Use localhost on your computer, or the https link on your phone."
+  }
+}

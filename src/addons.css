@@ -1,0 +1,10 @@
+.row .bigbtn { flex: 1; min-height: 96px; text-align: center; padding: 0 8px; }
+textarea { width: 100%; border: 1px solid #D9BFA2; border-radius: 12px; padding: 10px 12px; font: inherit; color: var(--tx); background: #fff; }
+.plain { margin: 0; padding-left: 1.1rem; }
+.qr { display: block; width: 100%; max-width: 280px; margin: 0 auto; }
+.card a { color: var(--g); }
+a.chip { display: inline-flex; align-items: center; text-decoration: none; }
+.badge { background: #FBE4C5; color: var(--deep-brown); border-radius: 99px; padding: 3px 10px; font-size: .8rem; font-weight: 700; }
+.badge.off { background: #EFE3D3; color: var(--mu); }
+.top { flex-wrap: wrap; row-gap: 6px; }
+input.check { width: 22px; min-height: 0; height: 22px; accent-color: var(--g); }
