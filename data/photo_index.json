@@ -1,0 +1,27 @@
+[
+    {
+        "weed_id": "cyperus_rotundus",
+        "scientific_name": "Cyperus rotundus — likely, if this means purple nutsedge",
+        "photo": "organised_photos/cyperus_rotundus/cyperus_rotundus_01.jpg"
+    },
+    {
+        "weed_id": "cynodon_dactylon",
+        "scientific_name": "Cynodon dactylon",
+        "photo": "organised_photos/cynodon_dactylon/cynodon_dactylon_01.jpg"
+    },
+    {
+        "weed_id": "echinochloa_colona",
+        "scientific_name": "Echinochloa colona",
+        "photo": "organised_photos/echinochloa_colona/echinochloa_colona_01.jpg"
+    },
+    {
+        "weed_id": "parthenium",
+        "scientific_name": "Parthenium hysterophorus",
+        "photo": "organised_photos/parthenium/parthenium_01.jpg"
+    },
+    {
+        "weed_id": "trianthema_portulacastrum",
+        "scientific_name": "Trianthema portulacastrum",
+        "photo": "organised_photos/trianthema_portulacastrum/trianthema_portulacastrum_01.jpg"
+    }
+]
