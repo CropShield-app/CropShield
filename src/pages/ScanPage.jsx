@@ -98,9 +98,17 @@ export default function ScanPage() {
         {src && <img ref={imgRef} src={src} alt="" className="preview" onLoad={scan} />}
         {busy && <p>...</p>}
         {res?.demo && <p className="note">{t('scan.demo')}</p>}
+        {res?.demo && res.error && <p className="lbl">{res.error}</p>}
         {unsure && <p className="note">{t('scan.notSure')}</p>}
         {res && !res.demo && (
           <h2>{tx ? tx.name : res.label} <small>{Math.round(res.confidence * 100)}%</small></h2>
+        )}
+        {res && !res.demo && !weed && <p className="note">{t('scan.noEntry', { label: res.label })}</p>}
+        {res?.top && res.top.length > 1 && (
+          <p className="lbl">{t('scan.top')}: {res.top.slice(1).map((x) => {
+            const w = findWeed(x.label);
+            return (w ? weedText(w, i18n.language).name : x.label) + ' ' + Math.round(x.confidence * 100) + '%';
+          }).join(' · ')}</p>
         )}
         {res?.frames && <p className="lbl">{t('scan.frames', { n: res.agree, total: res.frames })}</p>}
         {tx && !unsure && (

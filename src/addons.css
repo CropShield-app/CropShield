@@ -8,3 +8,4 @@ a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 .badge.off { background: #EFE3D3; color: var(--mu); }
 .top { flex-wrap: wrap; row-gap: 6px; }
 input.check { width: 22px; min-height: 0; height: 22px; accent-color: var(--g); }
+.checklink { display: block; text-align: center; font-size: .8rem; color: var(--mu); text-decoration: underline; padding-top: 6px; }

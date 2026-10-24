@@ -18,12 +18,14 @@
     "listen": "Listen",
     "notSure": "Not sure. Try a clearer photo.",
     "demo": "Demo mode: the AI model has not been added yet, so no result is shown.",
-    "noVoice": "No voice for this language is installed on this phone. Read the text above.",
+    "noVoice": "This phone or browser has no voice installed for this language, so it cannot read aloud. Read the text above, or install the voice: Android Settings > System > Languages > Text-to-speech, or Windows Settings > Time & language > Speech > Add voices. In Chrome you can also try Microsoft Edge, which has more Indian voices.",
     "frames": "Same weed in {{n}} of {{total}} video pictures",
     "uploadPhoto": "Upload photo",
     "uploadVideo": "Upload video",
     "stop": "Stop",
-    "autoRead": "Read results aloud automatically"
+    "autoRead": "Read results aloud automatically",
+    "noEntry": "No advice saved for \"{{label}}\" yet.",
+    "top": "Other guesses"
   },
   "ask": {
     "title": "Ask the AI helper",
@@ -31,7 +33,13 @@
     "search": "Ask",
     "q1": "What is this weed?",
     "q2": "How to remove it?",
-    "noMatch": "No answer found. Try other words."
+    "noMatch": "I could not find that. Try the weed's name, or tap a weed below.",
+    "which": "Which weed do you mean? Tap one:",
+    "usingScan": "Answer for the weed from your last scan.",
+    "secAbout": "About",
+    "secControl": "How to control it",
+    "secCaution": "Caution",
+    "noData": "No weed data found."
   },
   "farm": {
     "weather": "Temperature",
@@ -43,7 +51,13 @@
     "cropName": "Crop",
     "cropStage": "Crop stage",
     "weedWindow": "Weed-critical window",
-    "trend": "Weeds found in my scans"
+    "trend": "Weeds found in my scans",
+    "refresh": "Refresh",
+    "refreshed": "Refreshed at {{when}}",
+    "clearHistory": "Clear history",
+    "clearConfirm": "Delete all saved scans from this phone?",
+    "totalScans": "Total scans: {{n}}",
+    "lastScan": "last scan {{when}}"
   },
   "grid": {
     "title": "Field map",
@@ -117,7 +131,11 @@
     "failed": "Could not update. Check internet and location, then try again.",
     "rain": "rain",
     "rainCaution": "Rain is forecast in the next 3 days. Check your product label before spraying.",
-    "updated": "Saved {{when}}"
+    "updated": "Saved {{when}}",
+    "offline": "You are offline. Showing the last saved forecast.",
+    "old": "This forecast is {{h}} hours old.",
+    "denied": "Location is blocked. Allow location for this site in your browser, then tap Update.",
+    "failedNet": "Could not reach the weather service. Check your internet and try again."
   },
   "land": {
     "title": "Measure land with GPS",

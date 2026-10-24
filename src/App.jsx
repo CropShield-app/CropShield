@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import ScanPage from './pages/ScanPage.jsx';
 import FarmPage from './pages/FarmPage.jsx';
 import LaborPage from './pages/LaborPage.jsx';
+import CheckPage from './pages/CheckPage.jsx';
 import LanguagePicker from './components/LanguagePicker.jsx';
 import './styles.css';
 import './addons.css';
@@ -31,7 +32,9 @@ export default function App() {
             <Route path="/" element={<ScanPage />} />
             <Route path="/farm" element={<FarmPage />} />
             <Route path="/jobs" element={<LaborPage />} />
+            <Route path="/check" element={<CheckPage />} />
           </Routes>
+          <NavLink to="/check" className="checklink">Setup check</NavLink>
         </main>
         <nav className="tabs">
           <NavLink to="/" end className="tab">{t('nav.scanAsk')}</NavLink>

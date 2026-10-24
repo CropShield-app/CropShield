@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Chart, BarElement, CategoryScale, LinearScale, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { db } from '../db.js';
+import { findWeed, weedText } from '../weeds.js';
 import FieldGrid from '../components/FieldGrid.jsx';
 import WeatherCard from '../components/WeatherCard.jsx';
 import LandMeasure from '../components/LandMeasure.jsx';
@@ -13,17 +14,33 @@ const STAGES = ['sowing', 'growing', 'flowering', 'harvest'];
 const EMPTY = { id: 1, temp: '', rain: '', soil: '', water: '', land: '', crop: '', stage: '', window: '' };
 
 export default function FarmPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [farm, setFarm] = useState(EMPTY);
   const [counts, setCounts] = useState({});
+  const [total, setTotal] = useState(0);
+  const [last, setLast] = useState(0);
 
-  useEffect(() => {
-    db.farm.get(1).then((f) => f && setFarm(f));
-    db.scans.toArray().then((list) => {
+  // Read the saved scans from the phone again (also used by the Refresh button)
+  function loadScans() {
+    return db.scans.toArray().then((list) => {
       const c = {};
       list.forEach((s) => { c[s.label] = (c[s.label] || 0) + 1; });
       setCounts(c);
+      setTotal(list.length);
+      setLast(list.reduce((m, s) => Math.max(m, s.time || 0), 0));
     });
+  }
+  async function clearHistory() {
+    if (window.confirm(t('farm.clearConfirm'))) {
+      await db.scans.clear();
+      loadScans();
+    }
+  }
+
+  useEffect(() => {
+    db.farm.get(1).then((f) => f && setFarm(f));
+    loadScans();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Every change is saved straight to the phone
@@ -78,8 +95,16 @@ export default function FarmPage() {
 
       <section className="card">
         <p className="lbl">{t('farm.trend')}</p>
+        <div className="row wrap">
+          <button className="chip small" onClick={loadScans}>{t('farm.refresh')}</button>
+          <button className="chip small" onClick={clearHistory} disabled={total === 0}>{t('farm.clearHistory')}</button>
+        </div>
+        <p className="lbl">{t('farm.totalScans', { n: total })}{last ? ' · ' + t('farm.lastScan', { when: new Date(last).toLocaleString() }) : ''}</p>
         {labels.length === 0 ? <p>{t('trend.empty')}</p> : (
-          <Bar data={{ labels, datasets: [{ data: labels.map((l) => counts[l]), backgroundColor: '#8B4720' }] }}
+          <Bar data={{
+            labels: labels.map((l) => { const w = findWeed(l); return w ? weedText(w, i18n.language).name : l; }),
+            datasets: [{ data: labels.map((l) => counts[l]), backgroundColor: '#8B4720' }]
+          }}
             options={{ plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } }} />
         )}
       </section>

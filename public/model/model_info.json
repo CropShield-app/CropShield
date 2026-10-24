@@ -1,0 +1,14 @@
+{
+  "pixelScale": "minus1to1",
+  "inputSize": 224,
+  "labels": [
+    "cynodon_dactylon",
+    "cyperus_rotundus",
+    "echinochloa_colona",
+    "parthenium",
+    "trianthema_portulacastrum"
+  ],
+  "testAccuracy": null,
+  "testPhotos": 0,
+  "trainedOn": "2026-10-24"
+}
