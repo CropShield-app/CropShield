@@ -27,9 +27,9 @@ Five weed photographs have been organized into species-specific folders.
 - make_photo_index.py — creates a photo index.
 
 ## 7. Output Files
-- data/weeds.csv
-- data/weeds.json
-- data/photo_index.json
+- src/data/weeds.csv
+- src/data/weeds.json
+- src/data/photo_index.json
 
 ## 8. Validation Note
 The scripts check file structure and photo paths. Weed identification, translations and agricultural advice still require review using reliable agricultural sources or qualified experts.
