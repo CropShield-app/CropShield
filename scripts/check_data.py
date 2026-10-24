@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 project_folder = Path(__file__).resolve().parent.parent
-json_file = project_folder / "data" / "weeds.json"
+json_file = project_folder / "src" / "data" / "weeds.json"
 
 required_fields = [
     "id", "scientific_name", "source",
@@ -65,7 +65,7 @@ try:
     print("Please review any warnings above.")
 
 except FileNotFoundError:
-    print("ERROR: weeds.json was not found in the data folder.")
+    print("ERROR: weeds.json was not found in the src/data folder.")
 
 except (json.JSONDecodeError, ValueError) as error:
     print("ERROR:", error)

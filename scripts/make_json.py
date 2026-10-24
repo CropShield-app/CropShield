@@ -6,10 +6,10 @@ from pathlib import Path
 project_folder = Path(__file__).resolve().parent.parent
 
 # Locate the CSV file
-csv_file = project_folder / "data" / "weeds.csv"
+csv_file = project_folder / "src" / "data" / "weeds.csv"
 
 # Choose where to save the JSON file
-json_file = project_folder / "data" / "weeds.json"
+json_file = project_folder / "src" / "data" / "weeds.json"
 
 # Read the CSV and convert it into a list of dictionaries
 try:
@@ -44,7 +44,7 @@ try:
     print(f"JSON file saved at: {json_file}")
 
 except FileNotFoundError:
-    print("Error: weeds.csv was not found inside the data folder.")
+    print("Error: weeds.csv was not found inside the src/data folder.")
 
 except (OSError, ValueError, csv.Error) as error:
     print(f"Error: {error}")

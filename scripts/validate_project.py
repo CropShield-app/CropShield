@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 project = Path(__file__).resolve().parent.parent
-data_folder = project / "data"
+data_folder = project / "src" / "data"
 photos_folder = project / "organised_photos"
 
 csv_file = data_folder / "weeds.csv"

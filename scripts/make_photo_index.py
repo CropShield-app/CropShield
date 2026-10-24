@@ -7,7 +7,7 @@ project_folder = Path(__file__).resolve().parent.parent
 
 # Photo and data locations
 photos_folder = project_folder / "organised_photos"
-data_folder = project_folder / "data"
+data_folder = project_folder / "src" / "data"
 json_file = data_folder / "weeds.json"
 
 # Read the existing weed records
